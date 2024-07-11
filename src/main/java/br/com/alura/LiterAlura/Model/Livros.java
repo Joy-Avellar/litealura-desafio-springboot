@@ -15,9 +15,9 @@ public class Livros {
    private String titulo;
 
 
-    @ElementCollection
+    @ElementCollection(fetch = FetchType.EAGER)
     @CollectionTable(name = "idiomas", joinColumns = @JoinColumn(name = "livro_id"))
-    @Column(name = "idioma")
+    @Column(name = "idiomas")
     private List<String> idiomas;
     private Integer downloads;
     @ManyToOne(cascade = CascadeType.ALL)

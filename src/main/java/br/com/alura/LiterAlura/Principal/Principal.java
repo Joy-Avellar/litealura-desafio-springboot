@@ -71,7 +71,7 @@ public class Principal {
                         listarAutorPorAno();
                         break;
                     case 5:
-                        menuIdiomas();
+                        listarLivrosPorIdioma();
                         break;
                     case 0:
                         System.out.println("Saindo...");
@@ -88,7 +88,7 @@ public class Principal {
     }
 
     private Livros getDadosLivros() {
-
+        System.out.println("Digite o nome de um livro. Certifique-se de que está com o titulo original");
         var escolhaUsuario = leitura.nextLine();
 
         String json = consumo.obterDados(ENDERECO + escolhaUsuario.replace(" ", "%20"));
@@ -144,30 +144,26 @@ public class Principal {
 
             }
             
-            
-            private void menuIdiomas(){
-                var idiomas = """
-                        1 - Ingles
-                        2 - Frances
-                        3- Portugues
-                        4 - Espanhol
-                        0 - Cancelar
-                        """;
-                System.out.println("Escolha uma opção de 0-4");
-                var idiomaEscolhido = leitura.nextInt();
-                leitura.nextLine();
-                
-                if(idiomaEscolhido == 1){
-                    listarLivrosPorIdioma("{pt}");
-                }
-            }
-            
-            
-            
-    private void listarLivrosPorIdioma(String idioma) {
-        List<Livros> livrosIdiomas = repositorio.findByIdiomasContains(idioma);
-        livrosIdiomas.stream().sorted(Comparator.comparing(Livros::getTitulo))
-                .forEach(System.out::println);
+    private void listarLivrosPorIdioma() {
+
+        System.out.println("""
+                        en - Ingles
+                        fr - Frances
+                        pt - Portugues
+                        es - Espanhol
+                                            
+                        Escolha uma opção
+                        """);
+
+        var idiomaEscolhido = leitura.nextLine();
+        List<Livros> livrosIdiomas = repositorio.findByIdiomasContainingIgnoreCase(idiomaEscolhido);
+        System.out.println("Número de livros encontrados: " + livrosIdiomas.size());
+        if (!livrosIdiomas.isEmpty()) {
+        livrosIdiomas.stream()
+                .sorted(Comparator.comparing(Livros::getTitulo))
+                .forEach(System.out::println);} else {
+            System.out.println("Nenhum livro encontrado com esse idioma. Revise a pesquisa.");
+        }
     }
 
 }
