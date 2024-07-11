@@ -47,7 +47,8 @@ Para mais informações sobre a API utilizada para livros, consulte o site da AP
 
 ## Exemplos de Uso
 
-!()[https://github.com/Joy-Avellar/litealura-desafio-springboot/blob/main/Screencast%202024-07-11%2015%3A37%3A22.mp4]
+[Veja o Screencast](https://github.com/Joy-Avellar/litealura-desafio-springboot/blob/main/Screencast%202024-07-11%2015%3A37%3A22.mp4)
+
 
 ## Solução de Problemas
 Se você encontrar problemas, verifique o seguinte:
