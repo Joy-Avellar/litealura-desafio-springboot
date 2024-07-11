@@ -41,14 +41,26 @@ public class Principal {
             try {
 
                 var menu = """
-                        Bem - Vindo! O que deseja fazer?
+                        
+                        88           88                                               88                                      
+                        88           ""    ,d                                         88                                      \s
+                        88                 88                                         88                                      \s
+                        88           88  MM88MMM   ,adPPYba,  8b,dPPYba,  ,adPPYYba,  88  88       88  8b,dPPYba,  ,adPPYYba, \s
+                        88           88    88     a8P_____88  88P'   "Y8  ""     `Y8  88  88       88  88P'   "Y8  ""     `Y8 \s
+                        88           88    88     8PP""\"""\""  88          ,adPPPPP88  88  88       88  88          ,adPPPPP88 \s
+                        88           88    88,    "8b,   ,aa  88          88,    ,88  88  "8a,   ,a88  88          88,    ,88 \s
+                        88888888888  88    "Y888   `"Ybbd8"'  88          `"8bbdP"Y8  88   `"YbbdP'Y8  88          `"8bbdP"Y8 \s
+                                                                                                                              \s
+                        ｡☆✼★━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━★✼☆｡
+                               Bem - Vindo! O que deseja fazer?
                                                 
-                        1 - Buscar livro pelo título
-                        2 - Listar livros registrados
-                        3 - Lista nossos autores
-                        4 - Listar autores em determinado ano
-                        5 - Listar livros em determinado idioma
-                        0 - Sair
+                                1 - Buscar livro pelo título
+                                2 - Listar livros registrados
+                                3 - Lista nossos autores
+                                4 - Listar autores em determinado ano
+                                5 - Listar livros em determinado idioma
+                                0 - Sair
+                         ｡☆✼★━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━★✼☆｡
                         """;
                 System.out.println(menu);
                 System.out.println("Digite uma opção: ");
@@ -74,7 +86,11 @@ public class Principal {
                         listarLivrosPorIdioma();
                         break;
                     case 0:
-                        System.out.println("Saindo...");
+                        System.out.println("""
+                                 ∧,,,∧
+                                (=•·•=)
+                                /   づ♡ Obrigada por Usar
+                                """);
                         break;
                     default:
                         System.out.println("Opção inválida");
