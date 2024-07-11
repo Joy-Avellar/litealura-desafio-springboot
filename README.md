@@ -1,7 +1,7 @@
 ## LiteAlura Desafio SpringBoot
 
-![Gif](https://cdn.pixabay.com/animation/2023/06/13/15/13/15-13-16-625_512.gif)
-)
+<img src="https://cdn.pixabay.com/animation/2023/06/13/15/13/15-13-16-625_512.gif" alt="Alt Text" width="150" height="150" align="right">
+
 ## Introdução
 Este projeto é uma aplicação Spring Boot projetada para resolver um desafio da Alura. Serve como um modelo para uma configuração básica do Spring Boot e inclui as configurações e dependências necessárias para uma aplicação web típica baseada em Java.
 
